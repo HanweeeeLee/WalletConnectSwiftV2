@@ -11,7 +11,7 @@ class BuildConfiguration {
 
     var environment: Environment
 
-    var apnsEnvironment: APNSEnvironment {
+    var pushEnvironment: PushEnvironment {
         switch environment {
         case .debug:
             return .sandbox

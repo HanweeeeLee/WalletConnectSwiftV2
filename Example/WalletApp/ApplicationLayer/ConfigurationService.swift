@@ -17,11 +17,11 @@ final class ConfigurationService {
             redirect: AppMetadata.Redirect(native: "walletapp://", universal: nil)
         )
 
-        Web3Wallet.configure(metadata: metadata, crypto: DefaultCryptoProvider(), environment: BuildConfiguration.shared.apnsEnvironment)
+        Web3Wallet.configure(metadata: metadata, crypto: DefaultCryptoProvider(), environment: BuildConfiguration.shared.pushEnvironment)
 
         Notify.configure(
             groupIdentifier: "group.com.walletconnect.sdk",
-            environment: BuildConfiguration.shared.apnsEnvironment,
+            environment: BuildConfiguration.shared.pushEnvironment,
             crypto: DefaultCryptoProvider()
         )
 
