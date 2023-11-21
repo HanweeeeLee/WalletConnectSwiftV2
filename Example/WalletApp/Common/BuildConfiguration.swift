@@ -14,9 +14,9 @@ class BuildConfiguration {
     var pushEnvironment: PushEnvironment {
         switch environment {
         case .debug:
-            return .sandbox
+            return .apnsSandbox
         case .release:
-            return .production
+            return .apnsProduction
         }
     }
 
