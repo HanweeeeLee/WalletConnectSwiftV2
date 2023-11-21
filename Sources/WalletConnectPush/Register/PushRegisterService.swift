@@ -4,7 +4,7 @@ actor PushRegisterService {
     private let httpClient: HTTPClient
     private let projectId: String
     private let logger: ConsoleLogging
-    private let environment: APNSEnvironment
+    private let environment: PushEnvironment
     private let pushAuthenticator: PushAuthenticating
     private let clientIdStorage: ClientIdStoring
     /// The property is used to determine whether echo.walletconnect.org will be used
@@ -20,7 +20,7 @@ actor PushRegisterService {
          clientIdStorage: ClientIdStoring,
          pushAuthenticator: PushAuthenticating,
          logger: ConsoleLogging,
-         environment: APNSEnvironment) {
+         environment: PushEnvironment) {
         self.httpClient = httpClient
         self.clientIdStorage = clientIdStorage
         self.pushAuthenticator = pushAuthenticator

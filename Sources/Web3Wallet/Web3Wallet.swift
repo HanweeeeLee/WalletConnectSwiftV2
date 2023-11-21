@@ -43,7 +43,7 @@ public class Web3Wallet {
         metadata: AppMetadata,
         crypto: CryptoProvider,
         pushHost: String = "echo.walletconnect.com",
-        environment: APNSEnvironment = .production
+        environment: PushEnvironment = .apnsProduction
     ) {
         Pair.configure(metadata: metadata)
         Auth.configure(crypto: crypto)

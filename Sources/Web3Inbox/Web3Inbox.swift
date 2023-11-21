@@ -22,7 +22,7 @@ public final class Web3Inbox {
         bip44: BIP44Provider,
         config: [ConfigParam: Bool] = [:],
         groupIdentifier: String,
-        environment: APNSEnvironment,
+        environment: PushEnvironment,
         crypto: CryptoProvider,
         onSign: @escaping SigningCallback
     ) {

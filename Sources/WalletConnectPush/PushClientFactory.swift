@@ -3,7 +3,7 @@ import Foundation
 public struct PushClientFactory {
     public static func create(projectId: String,
                               pushHost: String,
-                              environment: APNSEnvironment) -> PushClient {
+                              environment: PushEnvironment) -> PushClient {
 
         let keychainStorage = KeychainStorage(serviceIdentifier: "com.walletconnect.sdk")
         let keyValueStorage = UserDefaults.standard
@@ -21,7 +21,7 @@ public struct PushClientFactory {
         pushHost: String,
         keyValueStorage: KeyValueStorage,
         keychainStorage: KeychainStorageProtocol,
-        environment: APNSEnvironment
+        environment: PushEnvironment
     ) -> PushClient {
         let sessionConfiguration = URLSessionConfiguration.default
         sessionConfiguration.timeoutIntervalForRequest = 5.0

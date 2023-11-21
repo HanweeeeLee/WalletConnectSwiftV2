@@ -1,6 +1,7 @@
 import Foundation
 
-public enum APNSEnvironment: String {
-    case production = "apns"
-    case sandbox = "apns-sandbox"
+public enum PushEnvironment: String {
+    case apnsProduction = "apns"
+    case apnsSandbox = "apns-sandbox"
+    case fcm = "fcm"
 }

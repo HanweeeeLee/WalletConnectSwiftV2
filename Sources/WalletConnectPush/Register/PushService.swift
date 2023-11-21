@@ -1,7 +1,7 @@
 import Foundation
 
 enum PushAPI: HTTPService {
-    case register(clientId: String, token: String, projectId: String, environment: APNSEnvironment, auth: String)
+    case register(clientId: String, token: String, projectId: String, environment: PushEnvironment, auth: String)
     case unregister(clientId: String, projectId: String, auth: String)
 
     var path: String {

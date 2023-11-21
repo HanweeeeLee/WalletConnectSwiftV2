@@ -21,7 +21,7 @@ public class Push {
     /// - Parameter clientId: https://github.com/WalletConnect/walletconnect-docs/blob/main/docs/specs/clients/core/relay/relay-client-auth.md#overview
     static public func configure(
         pushHost: String = pushHost,
-        environment: APNSEnvironment
+        environment: PushEnvironment
     ) {
         Push.config = Push.Config(pushHost: pushHost, environment: environment)
     }
